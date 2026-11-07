@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  klasifikasi_knalpot:
+    build: .
+    container_name: portal_deteksi_knalpot
+    ports:
+      - "5000:5000"
+    restart: unless-stopped
