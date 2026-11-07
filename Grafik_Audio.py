@@ -42,7 +42,7 @@ def buat_grafik_audio(file_audio, nama_gambar):
         print(f"Terjadi kesalahan: {e}")
 
 # Jalankan fungsi dengan memanggil file MP3 hasil konversi sebelumnya
-for i in range(2):
+for i in range(110):
     buat_grafik_audio(f"after-knalpot_brong/brong_{i+1}.mp3", f"grafik-knalpot_brong/brong_{i+1}.png")
     buat_grafik_audio(f"after-knalpot_standart/standart_{i+1}.mp3", f"grafik-knalpot_standart/standart_{i+1}.png")
 # buat_grafik_audio("Rekaman Baru.mp3", "grafik_output.png")

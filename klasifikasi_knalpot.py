@@ -9,11 +9,11 @@ from sklearn.metrics import accuracy_score, classification_report, confusion_mat
 # 1. Fungsi membaca audio (Aman dari error MP3/M4A di Windows)
 def muat_audio_aman(file_path):
     try:
-        # Coba baca langsung dengan librosa
+        # librosa
         y, sr = librosa.load(file_path, duration=5.0)
         return y, sr
     except Exception:
-        # Jika librosa gagal membaca mp3, gunakan moviepy untuk membuat file wav sementara
+        # Jika librosa gagal membaca mp3, gunakan moviepy untuk membuat file wav 
         temp_wav = "temp_baca.wav"
         klip = AudioFileClip(file_path)
         klip.write_audiofile(temp_wav, logger=None)
@@ -109,6 +109,8 @@ def tes_prediksi_audio(file_uji):
         # print(f"Tingkat Keyakinan : {keyakinan:.2f}%\n")
 
 # Contoh mengetes ulang salah satu file yang Anda miliki
-tes_prediksi_audio("123.mp3")
-tes_prediksi_audio("after-knalpot_brong/brong_11.mp3")
-tes_prediksi_audio("after-knalpot_standart/standart_8.mp3")
+
+# tes_prediksi_audio("Rekaman Baru.mp3")
+tes_prediksi_audio("1.ogg")
+# tes_prediksi_audio("after-knalpot_brong/brong_11.mp3")
+# tes_prediksi_audio("after-knalpot_standart/standart_8.mp3")
